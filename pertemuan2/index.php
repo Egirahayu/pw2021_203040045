@@ -2,7 +2,7 @@
     /* 
         Mohamad Egi Rahayu
         203040045
-        github.com/Egirahayu
+        https://github.com/Egirahayu/pw2021_203040045
         Pertemuan 2 (7 Februari 2021)
         Menjelaskan tentang PHP Dasar - Sintaks PHP
 
