@@ -18,8 +18,8 @@
 
     // Variabel dan Tipe Data :
     // Variabel : tidak boleh diawali dengan angka, tetapi boleh mengandung angka
-    $nama = "Mohamad Egi Rahayu";
-    echo "Halo, nama saya $nama";
+    // $nama = "Mohamad Egi Rahayu";
+    // echo "Halo, nama saya $nama";
 
     // Operator
     // 1. Aritmatika : + - * / %
@@ -69,12 +69,12 @@
 </head>
 <body>
     1. PHP di dalam HTML -->
-    <h1>Halo, Selamat Datang <?php echo "Egi Rahayu"; ?></h1>
-    <p><?php echo "ini adalah paragraf"; ?></p>
+    <!-- <h1>Halo, Selamat Datang <?php echo "Egi Rahayu"; ?></h1>
+    <p><?php echo "ini adalah paragraf"; ?></p> -->
 
     <!-- 2. HTML di dalam PHP -->
     <!-- <?php 
-        echo "<h1>Halo, Selamat Datang Egi Rahayu</h1>";
+        // echo "<h1>Halo, Selamat Datang Egi Rahayu</h1>";
     ?>
 </body>
 </html> -->
