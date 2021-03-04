@@ -3,7 +3,7 @@
     // 203040045
     // https://github.com/Egirahayu/pw2021_203040045
     // Pertemuan 4 (4 Maret 2021)
-    // Menjelaskan tentang PHP Dasar - Functiom (User-defined Function)
+    // Menjelaskan tentang PHP Dasar - Function (User-defined Function)
 
     // function salam() {
     //     return "Selamat Datang, Admin!";
