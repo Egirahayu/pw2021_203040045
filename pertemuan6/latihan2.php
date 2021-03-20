@@ -2,7 +2,7 @@
     // Mohamad Egi Rahayu
     // 203040045
     // https://github.com/Egirahayu/pw2021_203040045
-    // Pertemuan 5 (12 Maret 2021)
+    // Pertemuan 6 (12 Maret 2021)
     // Menjelaskan tentang PHP Dasar - Array assosciative
 
     // $mahasiswa = ["Mohamad Egi Rahayu", "203040045", "203040045@mail.unpas.ac.id", "Teknik Informatika"];
