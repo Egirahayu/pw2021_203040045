@@ -1,4 +1,10 @@
 <?php
+    // Nama : Mohamad Egi Rahayu
+    // NRP : 203040045
+    // Shift : PemrogramanWeb_Jumat10
+?>
+
+<?php
     // Menghubungkan dengan file php lainnya
     require 'functions.php';
 

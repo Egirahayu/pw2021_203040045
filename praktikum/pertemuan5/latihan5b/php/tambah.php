@@ -1,4 +1,11 @@
 <?php
+    // Nama : Mohamad Egi Rahayu
+    // NRP : 203040045
+    // Shift : PemrogramanWeb_Jumat10
+?>
+
+
+<?php
     require 'functions.php';
 
     if(isset($_POST['tambah'])) {
