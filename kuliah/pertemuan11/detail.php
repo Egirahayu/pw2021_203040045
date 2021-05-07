@@ -2,7 +2,7 @@
 // Mohamad Egi Rahayu
 // 203040045
 // https://github.com/Egirahayu/pw2021_203040045
-// Pertemuan 10 (30 April 2021)
+// Pertemuan 11 (30 April 2021)
 // Delete, Update and Searching Data
 ?>
 
