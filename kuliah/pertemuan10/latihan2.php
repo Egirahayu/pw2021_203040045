@@ -51,7 +51,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
       foreach ($mahasiswa as $mhs) : ?>
         <tr class="grey darken-3 white-text">
           <td class="center"><?= $i++; ?></td>
-          <td class="center"><img src="img/<?= $mhs['gambar']; ?>"></td>
+          <td class="center"><img src="img/<?= $mhs['gambar']; ?>" width="100px" height="100px"></td>
           <td class="center"><?= $mhs['nrp']; ?></td>
           <td><?= $mhs['nama']; ?></td>
           <td><?= $mhs['email']; ?></td>
