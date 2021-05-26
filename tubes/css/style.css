@@ -1,0 +1,47 @@
+body {
+  background-image: url(../assets/img/background/unsplash.jpg);
+}
+
+.slider h3, h5 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  text-align: justify;
+}
+
+.head {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card a:hover {
+  background-color: lightskyblue;
+  color: white;
+}
+
+.search {
+  width: 325px;
+  margin-left: -165px;
+  float: right;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.login {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.admin {
+  border: 1px solid rgba(0, 0, 0, 1.5);
+  color: white;
+}
+
+.remember {
+  margin-left: 5px;
+}
+
+marquee {
+  color: white;
+}
