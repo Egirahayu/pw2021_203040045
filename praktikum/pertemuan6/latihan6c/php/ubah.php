@@ -1,46 +1,48 @@
 <?php
-    // Nama : Mohamad Egi Rahayu
-    // NRP : 203040045
-    // Shift : PemrogramanWeb_Jumat10
+// Nama : Mohamad Egi Rahayu
+// NRP : 203040045
+// Shift : PemrogramanWeb_Jumat10
 ?>
 
 <?php
-    require 'functions.php';
+require 'functions.php';
 
-    $id = $_GET['id'];
-    $anm = query("SELECT * FROM anime WHERE id = $id")[0];
+$id = $_GET['id'];
+$anm = query("SELECT * FROM anime WHERE id = $id")[0];
 
-    if(isset($_POST['ubah'])) {
-        if(ubah($_POST) > 0) {
-            echo "<script>
+if (isset($_POST['ubah'])) {
+    if (ubah($_POST) > 0) {
+        echo "<script>
                     alert('Data Berhasil diubah!');
                     document.location.href = 'admin.php';
                   </script>";
-        } else {
-            echo "<script>
+    } else {
+        echo "<script>
                     alert('Data Gagal diubah!');
                     document.location.href = 'admin.php';
                   </script>";
-        }
     }
-    
-    session_start();
+}
 
-    if(!isset($_SESSION["username"])) {
-        header("Location: login.php");
-        exit;
-    }
+session_start();
+
+if (!isset($_SESSION["username"])) {
+    header("Location: login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Anime</title>
 </head>
+
 <body>
     <div class="container">
         <form action="" method="post">
@@ -60,16 +62,12 @@
                     <label for="anime">Anime</label>
                 </div>
                 <div class="input-field">
-                    <input type="text" name="rilis" id="rilis" required value="<?= $anm["rilis"]; ?>">
-                    <label for="rilis">Rilis</label>
+                    <input type="text" name="pengarang" id="pengarang" required value="<?= $anm["pengarang"]; ?>">
+                    <label for="pengarang">Pengarang</label>
                 </div>
                 <div class="input-field">
-                    <label for="status"></label>
-                    <select class="browser-default" name="status" id="status">
-                        <option value="" disabled selected>Status Anime</option>
-                        <option value="On-Going">On-Going</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                    <input type="text" name="rilis" id="rilis" required value="<?= $anm["rilis"]; ?>">
+                    <label for="rilis">Rilis</label>
                 </div>
                 <button class="waves-effect waves-light skyblue darken-1 btn" type="submit" name="ubah">Ubah Data!</button></a>
                 <button class="waves-effect waves-light skyblue darken-1 btn" type="submit">
@@ -81,4 +79,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
 </html>

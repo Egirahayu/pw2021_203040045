@@ -1,42 +1,44 @@
 <?php
-    // Nama : Mohamad Egi Rahayu
-    // NRP : 203040045
-    // Shift : PemrogramanWeb_Jumat10
+// Nama : Mohamad Egi Rahayu
+// NRP : 203040045
+// Shift : PemrogramanWeb_Jumat10
 ?>
 
 <?php
-    require 'functions.php';
+require 'functions.php';
 
-    $id = $_GET['id'];
-    $anm = query("SELECT * FROM anime WHERE id = $id")[0];
+$id = $_GET['id'];
+$anm = query("SELECT * FROM anime WHERE id = $id")[0];
 
-    if(isset($_POST['ubah'])) {
-        if(ubah($_POST) > 0) {
-            echo "<script>
+if (isset($_POST['ubah'])) {
+    if (ubah($_POST) > 0) {
+        echo "<script>
                     alert('Data Berhasil diubah!');
                     document.location.href = 'admin.php';
                   </script>";
-        } else {
-            echo "<script>
+    } else {
+        echo "<script>
                     alert('Data Gagal diubah!');
                     document.location.href = 'admin.php';
                   </script>";
-        }
     }
+}
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css">
     <title>Anime</title>
 </head>
+
 <body>
     <h3>Form Ubah Data Main Character Anime</h3>
 
     <form action="" method="post">
-        <input type="hidden" name="id" id="id" value="<?= $anm["id"] ?>">   
+        <input type="hidden" name="id" id="id" value="<?= $anm["id"] ?>">
         <ul>
             <li>
                 <label for="img">Image :</label><br>
@@ -51,16 +53,12 @@
                 <input type="text" name="anime" id="anime" required value="<?= $anm["anime"]; ?>"><br><br>
             </li>
             <li>
-                <label for="rilis">Rilis :</label><br>
-                <input type="text" name="rilis" id="rilis" required value="<?= $anm["rilis"]; ?>"><br><br>
+                <label for="pengarang">Pengarang :</label><br>
+                <input type="text" name="pengarang" id="pengarang" required value="<?= $anm["pengarang"]; ?>"><br><br>
             </li>
             <li>
-                <label for="status">Status Anime :</label><br>
-                <select name="status" id="status" required value="<?= $anm["status"]; ?>">
-                    <option value="">----------Pilih Status Anime----------</option>
-                    <option value="On-Going">On-Going</option>
-                    <option value="Completed">Completed</option>
-                </select>
+                <label for="rilis">Rilis :</label><br>
+                <input type="text" name="rilis" id="rilis" required value="<?= $anm["rilis"]; ?>"><br><br>
             </li>
             <br>
             <button type="submit" name="ubah">Ubah Data!</button>
@@ -70,4 +68,5 @@
         </ul>
     </form>
 </body>
+
 </html>

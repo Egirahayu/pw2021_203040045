@@ -1,43 +1,45 @@
 <?php
-    // Nama : Mohamad Egi Rahayu
-    // NRP : 203040045
-    // Shift : PemrogramanWeb_Jumat10
+// Nama : Mohamad Egi Rahayu
+// NRP : 203040045
+// Shift : PemrogramanWeb_Jumat10
 ?>
 
 <?php
-    require 'functions.php';
+require 'functions.php';
 
-    if(isset($_POST['tambah'])) {
-        if(tambah($_POST) > 0) {
-            echo "<script>
+if (isset($_POST['tambah'])) {
+    if (tambah($_POST) > 0) {
+        echo "<script>
                     alert('Data Berhasil ditambahkan!');
                     document.location.href = 'admin.php';
                   </script>";
-        } else {
-            echo "<script>
+    } else {
+        echo "<script>
                     alert('Data Gagal ditambahkan!');
                     document.location.href = 'admin.php';
                   </script>";
-        }
     }
-    
-    session_start();
+}
 
-    if(!isset($_SESSION["username"])) {
-        header("Location: login.php");
-        exit;
-    }
+session_start();
+
+if (!isset($_SESSION["username"])) {
+    header("Location: login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Anime</title>
 </head>
+
 <body>
     <div class="container">
         <form action="" method="post">
@@ -56,16 +58,12 @@
                     <label for="anime">Anime</label>
                 </div>
                 <div class="input-field">
-                    <input type="text" name="rilis" id="rilis">
-                    <label for="rilis">Rilis</label>
+                    <input type="text" name="pengarang" id="pengarang">
+                    <label for="pengarang">Pengarang</label>
                 </div>
                 <div class="input-field">
-                    <label for="status"></label>
-                    <select class="browser-default" name="status" id="status" required>
-                        <option value="" disabled selected>Status Anime</option>
-                        <option value="On-Going">On-Going</option>
-                        <option value="Completed">Completed</option>
-                    </select>
+                    <input type="text" name="rilis" id="rilis">
+                    <label for="rilis">Rilis</label>
                 </div>
                 <button class="waves-effect waves-light orange darken-4 btn" type="submit" name="tambah">Tambah Data!</button></a>
                 <button class="waves-effect waves-light orange darken-4 btn" type="submit">
@@ -77,4 +75,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
 </html>
