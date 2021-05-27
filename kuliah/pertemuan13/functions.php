@@ -176,7 +176,7 @@ function login($data)
   $password = htmlspecialchars($data['password']);
 
   // cek dulu username
-  if ($user = query("SELECT * FROM user WHERE username = '$username'")) {
+  if ($user = query("SELECT * FROM user WHERE username = '$username'")[0]) {
     // Cek password
     if (password_verify($password, $user['password'])) {
       // Set Session
